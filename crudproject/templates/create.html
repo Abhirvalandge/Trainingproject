@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block body_block %}
+
+
+<h3>Create New data</h3>
+
+<form method="POST" class="post-form" action="/create">
+
+    <!-- <table>{{ form.as_table }}</table> -->
+
+    {% csrf_token %}  
+
+
+    {{ form|crispy }}
+
+    <button type="submit" class="btn btn-success"> Submit </button>
+
+</form>
+
+
+    
+</form>
+
+{% endblock %}
